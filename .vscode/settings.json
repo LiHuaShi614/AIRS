@@ -1,0 +1,36 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\python.exe",
+  "python.terminal.activateEnvironment": false,
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}",
+    "${workspaceFolder}\\RRTTA-main"
+  ],
+  "python.testing.unittestEnabled": true,
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestArgs": [
+    "-v",
+    "-s",
+    "tests"
+  ],
+  "terminal.integrated.cwd": "${workspaceFolder}",
+  "terminal.integrated.env.windows": {
+    "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+    "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+  },
+  "files.watcherExclude": {
+    "**/.miniconda/**": true,
+    "**/.venv/**": true,
+    "**/checkpoints/**": true,
+    "**/data/**": true,
+    "**/outputs/**": true,
+    "**/work/**": true
+  },
+  "search.exclude": {
+    "**/.miniconda": true,
+    "**/.venv": true,
+    "**/checkpoints": true,
+    "**/data": true,
+    "**/outputs": true,
+    "**/work": true
+  }
+}

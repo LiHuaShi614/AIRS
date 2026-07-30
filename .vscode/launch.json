@@ -1,0 +1,74 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "AIRS: Dry-run all six",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\run_all_experiments.py",
+      "args": [
+        "--smoke",
+        "--dry-run",
+        "--suite-id",
+        "vscode_dry_run"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+      }
+    },
+    {
+      "name": "AIRS: Smoke all six",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\run_all_experiments.py",
+      "args": [
+        "--smoke",
+        "--suite-id",
+        "vscode_smoke"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+      }
+    },
+    {
+      "name": "AIRS: Smoke one group (E2)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\run_experiment.py",
+      "args": [
+        "E2",
+        "--smoke",
+        "--suite-id",
+        "vscode_e2_smoke"
+      ],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+      }
+    },
+    {
+      "name": "AIRS: Run all six (FULL, LONG)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}\\run_all_experiments.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "justMyCode": true,
+      "env": {
+        "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+        "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+      }
+    }
+  ]
+}

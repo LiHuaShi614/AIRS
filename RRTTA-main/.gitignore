@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# Environments and local configuration
+.venv/
+venv/
+.env
+.env.*
+
+# Local data, checkpoints, and generated artifacts
+data/
+checkpoints/
+outputs/
+logs/
+tmp/
+*.pt
+*.pth
+*.ckpt
+*.npy
+*.npz
+*.pkl
+
+# Plotting and editor caches
+.mpl_cache/
+.idea/
+.vscode/
+.DS_Store

@@ -1,0 +1,10 @@
+/.miniconda/
+/.venv/
+/checkpoints/
+/data/
+/outputs/
+/work/
+/.nature-figure.json
+__pycache__/
+*.py[cod]
+*.log

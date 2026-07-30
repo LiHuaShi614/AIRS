@@ -1,0 +1,107 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "AIRS: Test",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\python.exe",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+          "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+        }
+      },
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "RRTTA: Regression test",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\python.exe",
+      "args": [
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-v"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}\\RRTTA-main",
+        "env": {
+          "PYTHONPATH": "${workspaceFolder}\\RRTTA-main"
+        }
+      },
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "label": "AIRS: Dry-run all six",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\python.exe",
+      "args": [
+        "run_all_experiments.py",
+        "--smoke",
+        "--dry-run",
+        "--suite-id",
+        "vscode_dry_run"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+          "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+        }
+      },
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "AIRS: Smoke all six",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\python.exe",
+      "args": [
+        "run_all_experiments.py",
+        "--smoke",
+        "--suite-id",
+        "vscode_smoke"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+          "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+        }
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "AIRS: Run all six (FULL, LONG)",
+      "type": "process",
+      "command": "${workspaceFolder}\\.venv\\python.exe",
+      "args": [
+        "run_all_experiments.py"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "env": {
+          "MPLCONFIGDIR": "${workspaceFolder}\\work\\matplotlib",
+          "PYTHONPATH": "${workspaceFolder};${workspaceFolder}\\RRTTA-main"
+        }
+      },
+      "problemMatcher": []
+    }
+  ]
+}

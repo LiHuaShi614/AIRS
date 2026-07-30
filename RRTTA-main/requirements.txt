@@ -1,0 +1,7 @@
+# Install a CUDA-compatible PyTorch build for your system before this file.
+torch>=1.10
+torchvision>=0.11
+numpy>=1.22
+matplotlib>=3.5
+scikit-learn>=1.0
+robustbench @ git+https://github.com/RobustBench/robustbench.git@v0.1

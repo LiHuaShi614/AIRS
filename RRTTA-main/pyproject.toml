@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rrtta"
+version = "0.1.0"
+description = "Research implementation of RRTTA for CIFAR-C test-time adaptation"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = [
+    "torch>=1.10",
+    "torchvision>=0.11",
+    "numpy>=1.22",
+    "matplotlib>=3.5",
+    "scikit-learn>=1.0",
+    "robustbench @ git+https://github.com/RobustBench/robustbench.git@v0.1",
+]
+
+[tool.setuptools.packages.find]
+include = ["rrtta*"]
